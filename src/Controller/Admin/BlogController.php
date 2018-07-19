@@ -62,7 +62,7 @@ class BlogController extends AbstractController
     }
 
     /**
-     * Creates a new Post entity.
+     * Creates a new Post entity, authored by the current user ($this->getUser())
      *
      * @Route("/new", methods={"GET", "POST"}, name="admin_post_new")
      *
@@ -73,7 +73,6 @@ class BlogController extends AbstractController
     public function new(Request $request): Response
     {
         $post = new Post();
-        $post->setAuthor($this->getUser());
 
         // See https://symfony.com/doc/current/book/forms.html#submitting-forms-with-multiple-buttons
         $form = $this->createForm(PostType::class, $post)
