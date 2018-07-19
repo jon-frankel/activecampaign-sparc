@@ -1,26 +1,27 @@
-Symfony Demo Application
-========================
+Symfony Demo Application — WITH BUGS!
+=====================================
 
-The "Symfony Demo Application" is a reference application created to show how
-to develop Symfony applications following the recommended best practices.
+This is 99% an installation of the Symfony demo app, with specific bugs set on each branch.
 
 Requirements
 ------------
 
   * PHP 7.1.3 or higher;
-  * PDO-SQLite PHP extension enabled;
-  * and the [usual Symfony application requirements][1].
+  * PDO-SQLite PHP extension enabled.
 
 Installation
 ------------
 
-Execute this command to install the project:
+After cloning the repository, cd into the directory and run the following commands:
 
 ```bash
-$ composer create-project symfony/symfony-demo
+$ composer install
+$ mkdir var/data
+$ touch var/data/blog.sqlite
+$ php bin/console doctrine:database:create
+$ php bin/console doctrine:schema:create
+$ php bin/console doctrine:fixtures:load
 ```
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 Usage
 -----
@@ -34,18 +35,4 @@ $ cd symfony-demo/
 $ php bin/console server:run
 ```
 
-Alternatively, you can [configure a fully-featured web server][2] like Nginx
-or Apache to run the application.
-
-Tests
------
-
-Execute this command to run tests:
-
-```bash
-$ cd symfony-demo/
-$ ./vendor/bin/simple-phpunit
-```
-
-[1]: https://symfony.com/doc/current/reference/requirements.html
-[2]: https://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html
+Then switch to a branch to fix a bug!
