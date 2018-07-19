@@ -116,7 +116,7 @@ class Comment
         $this->publishedAt = $publishedAt;
     }
 
-    public function getAuthor(): User
+    private function getAuthor(): User
     {
         return $this->author;
     }
