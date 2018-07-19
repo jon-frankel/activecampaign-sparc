@@ -1,3 +1,11 @@
+/*
+  SCSS Styles. To compile, run:
+
+    $ yarn run encore [dev|production]
+
+  Files will be written to public/build. (You may need to run yarn install first.)
+ */
+
 // setting the value of this variable to an empty data URL is the only working solution
 // to load the Bootswatch web fonts locally and avoid loading them from Google servers
 // see https://github.com/thomaspark/bootswatch/issues/55#issuecomment-298093182
@@ -228,6 +236,10 @@ body#login #login-users-help p .console {
 }
 .post-metadata .metadata {
   margin-right: 1.5em;
+}
+
+.metadata.email {
+  font-style: italic;
 }
 
 .post-tags .label {
