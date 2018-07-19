@@ -44,7 +44,7 @@ class PostRepository extends ServiceEntityRepository
                 JOIN p.author a
                 LEFT JOIN p.tags t
                 WHERE p.publishedAt <= :now
-                ORDER BY p.publishedAt DESC
+                ORDER BY p.publishedAt ASC
             ')
             ->setParameter('now', new \DateTime())
         ;
