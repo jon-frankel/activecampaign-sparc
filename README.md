@@ -36,3 +36,8 @@ $ php bin/console server:run
 ```
 
 Then switch to a branch to fix a bug!
+
+  * [bug/500-error-view-post](tree/bug/500-error-view-post) -- there is an error when viewing a post
+  * [bug/post-order-incorrect](tree/bug/post-order-incorrect) -- the list of posts is ordered oldest to newest, but should be newest to oldest
+  * [bug/cannot-save-new-post](tree/bug/cannot-save-new-post) -- saving a new post results in an error
+  * [bug/email-should-be-italicized](tree/bug/email-should-be-italicized) -- on the list of posts, the email next to the author's name should be italicized
